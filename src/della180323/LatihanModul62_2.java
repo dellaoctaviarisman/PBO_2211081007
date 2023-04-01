@@ -2,18 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package della160323;
+package della180323;
 import java.util.Scanner;
 /**
  *
  * @author Windows 10 Pro
  */
-public class Latihan622 {
-    public static void main(String[] args) {
+public class LatihanModul62_2 {
+        public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int number = input.nextInt();
+        System.out.print("Masukkan sebuah angka antara 1-10: ");
+        int num = input.nextInt();
 
-        switch (number) {
+        switch (num) {
             case 1:
                 System.out.println("Satu");
                 break;
@@ -46,8 +47,8 @@ public class Latihan622 {
                 break;
             default:
                 System.out.println("Invalid number");
+                break;
         }
     }
+    
 }
- 
-

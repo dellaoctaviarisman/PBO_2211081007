@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
  *
  * @author Windows 10 Pro
  */
-public class Latihan2 {
+public class LatihanModul51 {
   public static void main(String[] args) {
         BufferedReader dataIn = 
             new BufferedReader(new InputStreamReader(System.in));

@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  *
  * @author Windows 10 Pro
  */
-public class Latihan3 {
+public class LatihanModul52 {
     public static void main(String[] args) {
         String kata1 = JOptionPane.showInputDialog("Masukkan kata pertama: ");
         String kata2 = JOptionPane.showInputDialog("Masukkan kata kedua: ");
