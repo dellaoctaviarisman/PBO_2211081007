@@ -39,5 +39,5 @@ public class LatihanModul51 {
         
         System.out.print(word1+" " +word2+ " "+ word3);
   }
-}  
+}
 
