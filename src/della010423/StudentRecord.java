@@ -9,7 +9,7 @@ package della010423;
  * @author Windows 10 Pro
  */
 public class StudentRecord {
-           private String name;
+        private String name;
     private String address;
     private int age; 
     private double mathGrade; 

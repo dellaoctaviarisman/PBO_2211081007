@@ -9,7 +9,7 @@ package della010423;
  * @author Windows 10 Pro
  */
 public class StudentRecordExample {
-       public static void main(String[] args){
+        public static void main(String[] args){
         StudentRecord sasa = new StudentRecord();
         StudentRecord rara = new StudentRecord();
         StudentRecord wati = new StudentRecord("Wati");
@@ -51,4 +51,4 @@ public class StudentRecordExample {
         
         
     }
-    }
+}
