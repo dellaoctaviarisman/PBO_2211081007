@@ -9,9 +9,10 @@ package della080423;
  * @author Windows 10 Pro
  */
 public class Person {
-{ 
+ 
     protected String name; 
     protected String address; 
+
  
  /** 
  * Default constructor 
