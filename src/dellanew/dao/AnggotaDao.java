@@ -12,10 +12,9 @@ import java.util.List;
  * @author LAB-MM
  */
 public interface AnggotaDao {
-    void insert (Anggota anggota) throws Exception;
-    void update(Anggota anggota) throws Exception;
-    void delete(Anggota anggota)throws Exception;
-    Anggota getAnggota(String kodeanggota) throws Exception;
+    void insert (Anggota anggota) throws Exception; //kerjanya akan di letak di daoImpl
+    void update (Anggota anggota) throws Exception;
+    void delete (Anggota anggota) throws Exception;
+    Anggota getAnggota (String kodeanggota) throws Exception;
     List<Anggota> getAll() throws Exception;
-    
 }

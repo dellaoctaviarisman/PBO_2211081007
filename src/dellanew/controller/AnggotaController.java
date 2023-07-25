@@ -4,6 +4,7 @@
  */
 package dellanew.controller;
 import dellanew.view.*;
+import dellanew.model.*;
 import dellanew.dao.*;
 import dellanew.db.DbHelper;
 import dellanew.model.Anggota;
@@ -25,29 +26,26 @@ public class AnggotaController {
     AnggotaDao dao;
     Connection connection; 
     
-    public AnggotaController (FormAnggota view){
-        try {
+    public AnggotaController (FormAnggota view) throws SQLException{
+
             this.view = view;
-            Connection connection = DbHelper.getConnection();
+            connection = DbHelper.getConnection();
             dao = new AnggotaDaoImpl(connection);
-        } catch (SQLException ex) {
-            Logger.getLogger(AnggotaController.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
     
     public void clearForm(){
-        view.getTxtkodeanggota().setText("");
-        view.getTxtnamaanggota().setText("");
-        view.getTxtalamat().setText("");
-        view.getCbojeniskelamin().removeAllItems();
-        view.getCbojeniskelamin().addItem("L");
-        view.getCbojeniskelamin().addItem("P");
+        view.getTxtKodeAnggota().setText("");
+        view.getTxtNamaAnggota().setText("");
+        view.getTxtAlamat().setText("");
+        view.getCboJenisKelamin().removeAllItems();
+        view.getCboJenisKelamin().addItem("L");
+        view.getCboJenisKelamin().addItem("P");
     }
     
     public void tampil(){
         try {
             DefaultTableModel tabelModel  =(DefaultTableModel) 
-                    view.getTblAnggota().getModel();
+                    view.getTabelAnggota().getModel();
             tabelModel.setRowCount(0);
             List<Anggota> list = dao.getAll();
             for(Anggota a : list){
@@ -66,11 +64,11 @@ public class AnggotaController {
     
     public void insert(){  
         try {
-            anggota = new Anggota;
-            anggota.setKodeanggota(view.getTxtkodeanggota().getText());
-            anggota.setNamaanggota(view.getTxtnamaanggota().getText());
-            anggota.setAlamat(view.getTxtalamat().getText());
-            anggota.setJeniskelamin(view.getCbojeniskelamin().getSelectedItem().toString());
+            anggota = new Anggota();
+            anggota.setKodeanggota(view.getTxtKodeAnggota().getText());
+            anggota.setNamaanggota(view.getTxtNamaAnggota().getText());
+            anggota.setAlamat(view.getTxtAlamat().getText());
+            anggota.setJeniskelamin(view.getCboJenisKelamin().getSelectedItem().toString());
             dao.insert(anggota);
             JOptionPane.showMessageDialog(view, "Entri Data Ok");
         } catch (Exception ex) {
@@ -91,8 +89,8 @@ public class AnggotaController {
     
     public void tabelKlik(){
         try {
-            String kodeanggota = view.getTblAnggota()
-                    .getValueAt(view.getTblAnggota().geSelectedRow(), 0).toString();
+            String kodeanggota = view.getTabelAnggota()
+                    .getValueAt(view.getTabelAnggota().getSelectedRow(), 0).toString();
             anggota = dao.getAnggota(kodeanggota);
             view.getTxtKodeAnggota().setText(anggota.getKodeanggota());
             view.getTxtNamaAnggota().setText(anggota.getNamaanggota());

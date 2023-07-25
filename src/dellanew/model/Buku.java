@@ -17,40 +17,42 @@ public class Buku {
     public Buku(){
     }
     
-    public Buku(String kodebuku, String judulbuku, String pengarang, String penerbit, String thnterbit){
+    public Buku(String kodebuku, String judulbuku, String pengarang, String penerbit){
         this.kodebuku = kodebuku;
         this.judulbuku = judulbuku;
         this.pengarang = pengarang;
-        this.penerbit = penerbit;   
+        this.penerbit = penerbit;
     }
-    
-    public String getKodeBuku(){
+
+    public String getKodebuku() {
         return kodebuku;
     }
-    public void setKodeBuku(String kodebuku){
+
+    public void setKodebuku(String kodebuku) {
         this.kodebuku = kodebuku;
     }
-    
-    public String getJudulBuku(){
+
+    public String getJudulbuku() {
         return judulbuku;
     }
-    public void setJudulBuku(String judulbuku){
+
+    public void setJudulbuku(String judulbuku) {
         this.judulbuku = judulbuku;
     }
-    
-    public String getPengarang(){
+
+    public String getPengarang() {
         return pengarang;
     }
-    public void setPengarang(String pengarang){
+
+    public void setPengarang(String pengarang) {
         this.pengarang = pengarang;
     }
-    
-    public String getPenerbit(){
+
+    public String getPenerbit() {
         return penerbit;
     }
-    public void setPenerbit(String penerbit){
+
+    public void setPenerbit(String penerbit) {
         this.penerbit = penerbit;
     }
 }
-
-

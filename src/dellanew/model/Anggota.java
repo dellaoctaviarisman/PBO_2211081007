@@ -9,11 +9,13 @@ package dellanew.model;
  * @author LAB-MM
  */
 public class Anggota {
-    private String kodeanggota;
+     private String kodeanggota;
     private String namaanggota;
     private String alamat;
     private String jeniskelamin;
 
+    public Anggota(){}
+    
     public Anggota(String kodeanggota, String namaanggota, String alamat, String jeniskelamin) {
         this.kodeanggota = kodeanggota;
         this.namaanggota = namaanggota;

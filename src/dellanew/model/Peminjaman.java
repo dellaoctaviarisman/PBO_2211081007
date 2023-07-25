@@ -11,48 +11,48 @@ package dellanew.model;
 public class Peminjaman {
         private Anggota anggota;
     private Buku buku;
-    private String tglpinjam;
-    private String tglkembali;
+    private String tglPinjam;
+    private String tglKembali;
     
-    public Peminjaman(){    
+    public Peminjaman(){
     }
     
-    public Peminjaman(Anggota anggota, Buku buku, String tglpinjam, String tglkembali){
+    public Peminjaman(Anggota anggota, Buku buku, String tglPinjam, String tglKembali){
         this.anggota = anggota;
         this.buku = buku;
-        this.tglpinjam = tglpinjam;
-        this.tglkembali = tglkembali;
+        this.tglPinjam = tglPinjam;
+        this.tglKembali = tglKembali;
     }
-    
-    public Anggota getAnggota(){
+
+    public Anggota getAnggota() {
         return anggota;
     }
-    
-    public void setAnggota(Anggota anggota){
+
+    public void setAnggota(Anggota anggota) {
         this.anggota = anggota;
     }
-    
-    public Buku getBuku(){
+
+    public Buku getBuku() {
         return buku;
     }
-    
-    public void setBuku(Buku buku){
+
+    public void setBuku(Buku buku) {
         this.buku = buku;
     }
-    
-    public String getTglPinjam(){
-        return tglpinjam;
+
+    public String getTglPinjam() {
+        return tglPinjam;
     }
-    
-    public void setTglPinjam(String tglpinjam){
-        this.tglpinjam = tglpinjam;
+
+    public void setTglPinjam(String tglPinjam) {
+        this.tglPinjam = tglPinjam;
     }
-    
+
     public String getTglKembali() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return tglKembali;
     }
-    
-    public void setTglKembali(String tglkembali){
-        this.tglkembali = tglkembali;
+
+    public void setTglKembali(String tglKembali) {
+        this.tglKembali = tglKembali;
     }
 }
